@@ -76,5 +76,10 @@
 	git merge test
 
 
+## sublime中git插件的常用命令
+	ctrl+shift+p
+	git add Current file
+	git quick commit
+	git push current branch
 
 
