@@ -6,8 +6,8 @@
 	cd dir
 	git init
 
-	git config --global user.name = "yaotian"
-	git config --global user.email = "yaotian@gmail.com"
+	git config --global user.name  "yaotian"
+	git config --global user.email  "yaotian@gmail.com"
 
 
 在目录下会创建.git. 
