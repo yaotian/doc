@@ -51,5 +51,30 @@
 
 	git fetch origin；git merge origin/master
 
-## Merge分支
+## 分支相关操作
+
+### 如何创建分支
+	$ git branch test
+	$ git branch
+	* master
+  	test
+### 进入某个分支
+	$ git checkout test
+	$ git branch
+	  master
+	* test
+### merge分支
+	$ git branch
+	  master
+	* test
+
+	$ git checkout master
+	$ git branch
+	* master
+	  test
+
+	git merge test
+
+
+
 
