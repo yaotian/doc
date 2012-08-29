@@ -49,7 +49,7 @@
 
 解决办法是
 
-	git fetch origin；git merge origin/master
+	git fetch origin;git merge origin/master
 
 ## 分支相关操作
 
