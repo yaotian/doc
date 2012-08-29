@@ -45,6 +45,11 @@
 	touch README
 	git add . # 将当前目录添加到 git 仓库中， 使用 git add -A 则是添加所有改动的文档
 	git commit -m "Initial commit"
+
+## 取消提交
+如果发现有个文件提交错了，想从remote的仓库中删除，但还保留本地的话，可以采用以下命令
+
+	git rm --cached {your file}
 	
 ## 把当前分支的代码提交到远程repository
 	$ git push origin master
