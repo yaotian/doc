@@ -15,7 +15,20 @@
 ## 加remote repository
 	git remote add origin git@github.com:yaotian/doc.git # 设置仓库
 
-“origin”为远程repository的alias,在后面的命令中表示将表示这个远程的repository.
+"origin"为远程repository的alias,在后面的命令中表示将表示这个远程的repository.
+
+**Note**:   
+如果因为种种原因不能用git协议，而只能用https的话，这样带来一个问题，每次都需要输入用户名和密码，太麻烦了,解决办法如下
+
+删除掉原来的remote的alias
+
+	git remote rm origin	
+
+增加新的
+
+	git remote add origin https://{your name}:{you passwd}@github.com/yaotian/doc.git
+
+
 
 ## 查看当前有哪些remote alias
 	$ git remote -v
