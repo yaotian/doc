@@ -12,3 +12,4 @@ TODO List
 - Hadoop
 - Go
 - Plan 9
+- Python
