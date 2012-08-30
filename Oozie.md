@@ -10,7 +10,11 @@
 	export M3_HOME={you maven folder}
 	export Path=$Path:$M3_HOME/bin
 
-到oozie目录下运行mvn install
+到{Oozie home}/bin目录下运行mkdistro.sh
+
+如果失败的话，从失败的地方重新运行可以用命令：      
+
+	mkdistro.sh -ff
 
 
 
