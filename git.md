@@ -101,3 +101,7 @@
 	git push current branch
 
 
+****
+## 参考
+[Pro git 中文版](http://git-scm.com/book/zh)
+
