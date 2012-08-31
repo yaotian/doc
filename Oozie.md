@@ -25,8 +25,12 @@
 
 	mkdistro.sh -ff
 
+***Note:*** 用mvn package 只生成每个component的target目录下的东东，不会在distro目录下生成最终的完整oozie（这点比较悲催）
 
 ## 安装
+
+简单，直接将distro目录下的东东拷贝到你的生产路径下就可以了
+
 
 ## 配置
 ### 配置Hadoop
@@ -41,7 +45,8 @@
 	  <value>hadoop</value>
 	</property>
 
-***Note:***此处的value为运行job所在的机器名和hadoop所在的group名。不能用*
+***Note:***此处的value为运行job所在的机器名和hadoop所在的group名。不能用*     
+这个步骤配置不对的话， 会出现"hadoop is not allowed to impersonate hadoop"问题
 
 别忘记copy配置文件到slave, 重启启动Hadoop
 
@@ -98,11 +103,12 @@
 
 
 
-### Run Jobs
+## 使用Oozie
 
 
 
-hadoop is not allowed to impersonate hadoop
 
 
+## 参考
 
+[map-reduce in oozie](http://incubator.apache.org/oozie/map-reduce-cookbook.html)
