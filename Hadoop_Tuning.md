@@ -74,7 +74,9 @@ Hadoop 安装容易，可使用起来并不容易，需要很多的性能调优�
 	优化值：0.95 * mapred.tasktracker.tasks.maximum
 
 
+### 疑难问题
 
+Map and Reduce代码中不要用sys print. 这个动作会消耗大量的资源，造成问题
 
 ## 参考
 
