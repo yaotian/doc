@@ -128,6 +128,41 @@
 #### workflow.xml
 
 
+	<workflow-app xmlns="uri:oozie:workflow:0.2" name="map-reduce-wf">
+	    <start to="mr-node"/>
+	    <action name="mr-node">
+	        <java>
+	            <job-tracker>${jobTracker}</job-tracker>
+	            <name-node>${nameNode}</name-node>
+	            <configuration>
+	                <property>
+	                    <name>mapred.job.queue.name</name>
+	                    <value>${queueName}</value>
+	                </property>
+	           </configuration>
+	            <main-class>od.hadoop.main.NewSortLocations</main-class>
+	            <arg>/input/raw_cells.txt</arg>
+	            <arg>/user/hadoop/output/sort_results/</arg>
+	            <arg>3</arg>
+	        </java>
+	        <ok to="end"/>
+	        <error to="fail"/>
+	    </action>
+	    <kill name="fail">
+	        <message>Map/Reduce failed, error message[${wf:errorMessage(wf:lastErrorNode())}]</message>
+	    </kill>
+	    <end name="end"/>
+	</workflow-app>
+
+以上的配置是可以工作的，但是如果在action中加入会出错，还不知道是什么原因
+
+    <prepare>
+        <delete path="/user/hadoop/output/sort_results/"/>
+    </prepare>
+
+原因是前面应该加上 hdfs://master:9000/user/hadoop/output/sort_results/
+
+
 ## 参考
 
 [map-reduce in oozie](http://incubator.apache.org/oozie/map-reduce-cookbook.html)
