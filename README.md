@@ -9,7 +9,7 @@ Yaotian Zheng's docs
 
 TODO List
 ----
-- Hadoop  
++ Hadoop Tuning   @done (2012-09-28 13:53)
 + Oozie  @done (2012-09-28 13:42)
 - Go
 - Plan 9
